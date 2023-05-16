@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appetizers</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+function searchFunction() {
+  x = document.getElementsByClassName("menu-item");
+  q = document.getElementById("tsearch");
+  q.value = q.value.toUpperCase();
+  for (i = 0; i < x.length; i++) {
+	let text = x[i].children[0].children[1].innerText.toUpperCase()
+	let position = text.search(q.value);
+  	if(position > -1){
+  		x[i].style.display = "";
+  	} else {
+  		x[i].style.display = "none";
+  	}
+  }
+}
+
+</script>
+</head>
+
+<body>
+<header>
+        <nav>
+            <div class= "ayham">
+            <ul>
+                <li><a href="maincourses.html">Main Courses</a></li>
+                <li><a href="appetizers.html">Appetizers</a></li>
+                <li><a href="soups.html">Soups</a></li>
+                <li><a href="desserts.html">Desserts</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+            </ul>
+			<input style="width: 80%;" type="text" placeholder="Enter the keywords" id="tsearch"> <button class="button" onclick="searchFunction()">Search</button>
+			</div>
+
+           
+        </nav>
+
+    </header>
+
+    <h1>Appetizers</h1>
+	
+
+
+    <div class="menu-item">
+        <img src="focaccia-bread.jpg" alt="Focaccia Bread">
+        <h2>Focaccia Bread</h2>
+        <p>Baked bread topped with olive oil and herbs.</p>
+    </div>
+
+    <div class="menu-item">
+        <img src="oregano-marinated-tomato-salad.jpg" alt="Oregano-Marinated Tomato Salad">
+        <h2>Oregano-Marinated Tomato Salad</h2>
+        <p>Tomatoes marinated in oregano and olive oil.</p>
+    </div>
+
+    <div class="menu-item">
+        <img src="antipasto-salad.jpg" alt="Antipasto Salad">
+        <h2>Antipasto Salad</h2>
+        <p>A salad made with cured meats, cheese, and vegetables.</p>
+    </div>
+
+    <div class="menu-item">
+        <img src="eggplant-caponata.jpg" alt="Eggplant Caponata">
+        <h2>Eggplant Caponata</h2>
+        <p>A sweet and sour eggplant dish made with capers and olives.</p>
+    </div>
+
+    
+
+</body>
+
+</html>
